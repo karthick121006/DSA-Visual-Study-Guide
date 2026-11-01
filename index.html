@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSA Visual Study Guide</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>DSA Visual Study Guide</h1>
+        <p>Learn Data Structures and Algorithms Visually</p>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#topics">DSA Topics</a>
+        <a href="#about">About</a>
+    </nav>
+
+    <section id="home" class="hero">
+        <h2>Welcome to DSA Learning</h2>
+        <p>Understand Data Structures and Algorithms through
+        simple explanations and visual animations.</p>
+        <a href="#topics" class="btn">Start Learning</a>
+    </section>
+
+    <section id="topics">
+        <h2>Explore DSA Topics</h2>
+
+        <div class="topic-container">
+            <div class="topic-card">
+                <h3>Arrays</h3>
+                <p>Learn how elements are stored in arrays.</p>
+            </div>
+
+            <div class="topic-card">
+                <h3>Stack</h3>
+                <p>Understand Push and Pop operations.</p>
+            </div>
+
+            <div class="topic-card">
+                <h3>Queue</h3>
+                <p>Learn Enqueue and Dequeue operations.</p>
+            </div>
+
+            <div class="topic-card">
+                <h3>Linked List</h3>
+                <p>Understand nodes and connections.</p>
+            </div>
+
+            <div class="topic-card">
+                <h3>Sorting</h3>
+                <p>Learn different sorting algorithms.</p>
+            </div>
+
+            <div class="topic-card">
+                <h3>Searching</h3>
+                <p>Understand Linear and Binary Search.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="search-section">
+    <h2>Searching Visualizer</h2>
+    <p>Learn Linear Search Operation</p>
+
+    <div id="search-container"></div>
+
+    <input type="number" id="searchInput" placeholder="Enter number to search">
+    <button onclick="linearSearch()">Search</button>
+
+    <p id="searchMessage">Enter a number to search</p>
+</section>
+<section id="quiz-section">
+    <h2>DSA Quiz</h2>
+    <p>Test Your Data Structures Knowledge</p>
+
+    <h3>1. Which data structure follows LIFO?</h3>
+    <button onclick="checkQuiz(0, 'Stack')">Stack</button>
+    <button onclick="checkQuiz(0, 'Queue')">Queue</button>
+    <button onclick="checkQuiz(0, 'Array')">Array</button>
+
+    <h3>2. Which data structure follows FIFO?</h3>
+    <button onclick="checkQuiz(1, 'Queue')">Queue</button>
+    <button onclick="checkQuiz(1, 'Stack')">Stack</button>
+    <button onclick="checkQuiz(1, 'Tree')">Tree</button>
+
+    <h3>3. Which is a sorting algorithm?</h3>
+    <button onclick="checkQuiz(2, 'Bubble Sort')">Bubble Sort</button>
+    <button onclick="checkQuiz(2, 'Linear Search')">Linear Search</button>
+    <button onclick="checkQuiz(2, 'Binary Search')">Binary Search</button>
+
+    <h3>4. Which data structure uses nodes?</h3>
+    <button onclick="checkQuiz(3, 'Linked List')">Linked List</button>
+    <button onclick="checkQuiz(3, 'Array')">Array</button>
+    <button onclick="checkQuiz(3, 'Stack')">Stack</button>
+
+    <h3>5. Which search checks elements one by one?</h3>
+    <button onclick="checkQuiz(4, 'Linear Search')">Linear Search</button>
+    <button onclick="checkQuiz(4, 'Binary Search')">Binary Search</button>
+    <button onclick="checkQuiz(4, 'Bubble Sort')">Bubble Sort</button>
+
+    <h3 id="quizScore">Your Score: 0 / 5</h3>
+    <p id="quizMessage">Answer all questions!</p>
+</section>
+   <section id="about">
+        
+<section id="stack-section">
+    <h2>Stack Visualizer</h2>
+    <p>Learn Push and Pop Operations</p>
+
+    <div id="stack-container"></div>
+
+    <input type="number" id="stackInput"
+    placeholder="Enter a number">
+
+    <button onclick="pushElement()">Push</button>
+    <button onclick="popElement()">Pop</button>
+
+    <p id="stackMessage">Stack is Empty</p>
+</section>
+
+<section id="queue-section">
+    <h2>Queue Visualizer</h2>
+    <p>Learn Enqueue and Dequeue Operations</p>
+
+    <div id="queue-container"></div>
+
+    <input type="number" id="queueInput"
+    placeholder="Enter a number">
+
+    <button onclick="enqueueElement()">Enqueue</button>
+    <button onclick="dequeueElement()">Dequeue</button>
+
+    <p id="queueMessage">Queue is Empty</p>
+</section>
+
+<!-- Linked List Visualizer -->
+
+<section id="linkedlist-section">
+    <h2>Linked List Visualizer</h2>
+    <p>Learn how nodes are connected</p>
+
+    <div id="linkedlist-container"></div>
+
+    <input type="number" id="listInput"
+    placeholder="Enter a number">
+
+    <button onclick="addNode()">Add Node</button>
+    <button onclick="deleteNode()">Delete Node</button>
+
+    <p id="listMessage">Linked List is Empty</p>
+</section>
+
+
+
+        <h2>About This Project</h2>
+        <p>This project helps students understand DSA
+        concepts using interactive visual learning.</p>
+    </section>
+
+    <footer>
+        <p>DSA Visual Study Guide | 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

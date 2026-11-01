@@ -1,0 +1,517 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f4f6fb;
+    color: #222;
+}
+
+header {
+    background: #172554;
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+header h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+nav {
+    background: #1e3a8a;
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: bold;
+}
+
+.hero {
+    text-align: center;
+    padding: 70px 20px;
+    background: #dbeafe;
+}
+
+.hero h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    margin-bottom: 25px;
+    font-size: 17px;
+}
+
+.btn {
+    display: inline-block;
+    background: #2563eb;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+#topics {
+    padding: 45px 30px;
+    text-align: center;
+}
+
+#topics h2 {
+    margin-bottom: 30px;
+}
+
+.topic-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.topic-card {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px #00000015;
+    transition: 0.3s;
+}
+
+.topic-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px #00000025;
+}
+
+.topic-card h3 {
+    color: #1e40af;
+    margin-bottom: 12px;
+}
+
+#about {
+    background: #e0e7ff;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+#about h2 {
+    margin-bottom: 15px;
+}
+
+footer {
+    background: #172554;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+@media (max-width: 650px) {
+    .topic-container {
+        grid-template-columns: 1fr;
+    }
+
+    nav a {
+        margin: 0 8px;
+    }
+}
+
+/* Sorting Visualizer */
+
+#visualizer {
+    background: white;
+    margin: 30px auto;
+    padding: 35px 20px;
+    max-width: 1000px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px #00000015;
+}
+
+#visualizer h2 {
+    color: #172554;
+    margin-bottom: 12px;
+}
+
+#bars {
+    height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 15px;
+    margin: 30px 0;
+}
+
+.bar {
+    width: 55px;
+    background: #2563eb;
+    color: white;
+    border-radius: 6px 6px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 8px;
+    font-weight: bold;
+    transition: height 0.3s;
+}
+
+#visualizer button {
+    background: #172554;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    margin: 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+#visualizer button:hover {
+    background: #2563eb;
+}
+
+#visualizer button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Fix Topic Card Alignment */
+
+.topic-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.topic-card {
+    width: 100%;
+    min-width: 0;
+    padding: 30px 15px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .topic-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 500px) {
+    .topic-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Stack Visualizer */
+
+#stack-section {
+    background: white;
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 35px 20px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px #00000015;
+}
+
+#stack-section h2 {
+    color: #172554;
+    margin-bottom: 12px;
+}
+
+#stack-container {
+    min-height: 180px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    margin: 25px auto;
+}
+
+.stack-item {
+    background: #2563eb;
+    color: white;
+    width: 180px;
+    padding: 12px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+#stackInput {
+    padding: 12px;
+    width: 180px;
+    border: 1px solid #aaa;
+    border-radius: 6px;
+}
+
+#stack-section button {
+    background: #172554;
+    color: white;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+#stack-section button:hover {
+    background: #2563eb;
+}
+
+/* Queue Visualizer */
+
+#queue-section {
+    background: white;
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 35px 20px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px #00000015;
+}
+
+#queue-section h2 {
+    color: #172554;
+    margin-bottom: 12px;
+}
+
+#queue-container {
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 30px auto;
+}
+
+.queue-item {
+    background: #2563eb;
+    color: white;
+    min-width: 65px;
+    padding: 20px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+#queueInput {
+    padding: 12px;
+    width: 180px;
+    border: 1px solid #aaa;
+    border-radius: 6px;
+}
+
+#queue-section button {
+    background: #172554;
+    color: white;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+#queue-section button:hover {
+    background: #2563eb;
+}
+
+/* Linked List Visualizer */
+
+#linkedlist-section {
+    background: white;
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 35px 20px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px #00000015;
+}
+
+#linkedlist-section h2 {
+    color: #172554;
+    margin-bottom: 12px;
+}
+
+#linkedlist-container {
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 30px auto;
+}
+
+.list-node {
+    background: #2563eb;
+    color: white;
+    padding: 18px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.list-arrow {
+    color: #172554;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#listInput {
+    padding: 12px;
+    width: 180px;
+    border: 1px solid #aaa;
+    border-radius: 6px;
+}
+
+#linkedlist-section button {
+    background: #172554;
+    color: white;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+#linkedlist-section button:hover {
+    background: #2563eb;
+}
+/* Searching Visualizer */
+#search-section {
+    background: white;
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 35px 20px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px #00000015;
+}
+
+#search-section h2 {
+    color: #172554;
+}
+
+#search-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 30px auto;
+    flex-wrap: wrap;
+}
+
+.search-item {
+    background: #2563eb;
+    color: white;
+    padding: 18px 25px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+#searchInput {
+    padding: 12px;
+    width: 180px;
+    border: 1px solid #aaa;
+    border-radius: 6px;
+}
+
+#search-section button {
+    background: #172554;
+    color: white;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 5px;
+}
+/* DSA Quiz Section */
+#quiz-section {
+    background: white;
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 35px 20px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px #00000015;
+}
+
+#quiz-section h2 {
+    color: #172554;
+    margin-bottom: 15px;
+}
+
+#quiz-section h3 {
+    margin: 20px 0;
+    color: #172554;
+}
+
+#quiz-section button {
+    background: #172554;
+    color: white;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 8px;
+}
+
+#quiz-section button:hover {
+    background: #2563eb;
+}
+/* Navigation Bar */
+nav {
+    background: #1e3a8a;
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+nav a:hover {
+    color: #facc15;
+}
+/* Final Website Improvements */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+section {
+    scroll-margin-top: 20px;
+}
+
+button {
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: white;
+    background: #172554;
+}
